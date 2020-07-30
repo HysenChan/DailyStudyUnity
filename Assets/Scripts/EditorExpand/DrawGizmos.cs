@@ -78,3 +78,18 @@ public class DisableSelectedObject
           };
     }
 }
+
+#if UNITY_EDITOR
+[ExecuteInEditMode]
+public class EditorRunScript:MonoBehaviour
+{
+    private void OnGUI()
+    {
+        if (GUILayout.Button("PleaseClick"))
+        {
+            Debug.Log("Click");
+        }
+        GUILayout.Label("Hello,you have clicked!");
+    }
+}
+#endif
