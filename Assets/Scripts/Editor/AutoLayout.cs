@@ -27,12 +27,9 @@ public class AutoLayout : EditorWindow
         boxes.style.flexWrap = Wrap.Wrap;
         for (int i = 0; i < 20; i++)
         {
-            TextField m_TextField = new TextField();
-            boxes.Add(m_TextField);
-            Button button = new Button(delegate () {
-                Debug.LogFormat("Click");
-            });
-            button.text = "我是按钮我要自适应";
+            TextField mTextField = new TextField();
+            boxes.Add(mTextField);
+            Button button = new Button(delegate() { Debug.LogFormat("Click"); }) {text = "我是按钮我要自适应"};
 
             boxes.Add(button);
         }
